@@ -168,7 +168,7 @@ export default function Home() {
                 Seamless Integration
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                With folder.chat, you can bring chat directly into your existing workflow. Whether you&apos;re using Jira, Confluence, or your own custom tools, folder.chat makes it easy to connect and collaborate.
+                With folder.chat, you can bring chat directly into your existing workflow. Whether you&apos;re using Github, Confluence, Slack, or your own custom tools, folder.chat makes it easy to connect and collaborate.
                 </p>
               </div>
               <div className="w-full lg:w-1/2">
