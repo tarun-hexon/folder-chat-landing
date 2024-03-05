@@ -52,33 +52,33 @@ export default function Home() {
 
   const plans = [
     {
-      name: 'Free',
-      price: '$0',
+      name: 'Free Plan',
+      price: 'Free',
       limits: [
-        'Upto 3 PDFs',
-        '5 MB / PDF',
-        'Chat with 1 PDF at a time',
-        '10 messages / month'
+        'Up to 3 documents per folder; maximum of 3 folders per user.',
+        'Maximum of 10MB per file.',
+        '.pdf only; no integration with data connectors.',
+        'Up to 1,000 messages per month across folders.'
       ]
     },
     {
-      name: 'Basic',
-      price: '$5',
+      name: 'Starter Plan',
+      price: '$10/user/month, $100 annually.',
       limits: [
-        'Upto 25 PDFs',
-        '16 MB / PDF',
-        'Chat with 1 PDF at a time',
-        '500 messages / month'
+        'Up to 5 documents per folder; maximum of 10 folders per user.',
+        'Maximum of 25MB per file.',
+        '.pdf only; Includes GitHub and Google Drive integrations.',
+        'Up to 1,000 messages per folder per month.'
       ]
     },
     {
-      name: 'Enterprise',
+      name: 'Enterprise Plan',
       price: 'Contact Us',
       limits: [
-        'Upto 25 PDF/DOCX/TXT/CSV per day',
-        '32 MB / PDF',
-        'Chat with 3 PDFs at a time',
-        '1000 questions / month'
+        'Up to 10 documents per folder; maximum of 10 folders per user.',
+        'No file size limit',
+        'Option for self-hosting with a custom LLM on your own cloud infrastructure. ',
+        'Unlimited messaging.'
       ]
     }
   ];
@@ -99,7 +99,7 @@ export default function Home() {
   return (
       <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
         <FloatingNav navItems={navItems} className="text-white bg-black h-16"/>
-        <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3] font-Inter">
+        <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">
           <Link className="flex items-center justify-center" href="#">
             <Image src={'/assets/favicon.svg'} alt="folder.chat" width={30} height={30}/>
           </Link>
@@ -119,14 +119,14 @@ export default function Home() {
           </nav>
         </header>
         <main className="flex-1">
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="about">
+          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24 " id="about">
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
               <div className="text-center space-y-4">
                 <Spotlight
                   className="-top-20 left-0 md:left-60 md:top-20"
                   fill="white"
                 />
-                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
+                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#14B8A6]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#2ecc71]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#006400]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00FF00]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
 
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Chat with your internal documents. Collaborate with your team. Connect with your systems.
@@ -246,27 +246,29 @@ export default function Home() {
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
               <div className="w-full flex gap-10 justify-center items-center flex-wrap">
                 {plans.map((plan, idx) => {
-                  return <BackgroundGradient key={idx} className="lg:min-w-[28vw] min-w-[90vw] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8">
-                  <div className="space-y-4">
-                    <div className="overflow-hidden p-4 space-y-4">
-                      <h2 className="w-fit px-2 py-1 bg-[#14B8A6] rounded-md text-xl">{plan.name}</h2>
-                      <div>
-                        <span className="text-3xl ">{plan.price}</span>
-                        <span>{plan.name !== 'Enterprise' && '/ Month'}</span>
-                      </div>
-                      <div className="flex flex-col gap-2">
+                  return <BackgroundGradient key={idx} className="lg:max-w-[28vw] max-w-[90vw] h-[32rem] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8 flex flex-col justify-between">
+                  <div className="space-y-4" >
+                    <div className="overflow-hidden p-4 space-y-8 w-full">
+                      <h2 className="w-fit px-2 py-1 bg-[#14B8A6] rounded-md text-xl m-auto">{plan.name}</h2>
+                      <div className="flex flex-col gap-4">
                         {plan?.limits?.map((limit, idx) => {
                           return <p key={idx} className='font-[500] text-[12px] leading-5 inline-flex items-center gap-2'>
                             <Image src={checkIcon} alt='check' width={30} height={30} />
-                            <span>{limit}</span>
+                            <span className="w-full">{limit}</span>
                           </p>
                         })}
+                        {plan.name !== 'Enterprise Plan' && <p className='font-[500] text-[12px] leading-5 inline-flex items-center gap-2'>
+                            <Image src={checkIcon} alt='check' width={30} height={30} />
+                            <span className="w-full">{plan.price}</span>
+                          </p>}
                       </div>
+                      
                     </div>
-                    <div className="w-full flex justify-center items-center">
-                        <Button>Get Started</Button>                    
-                    </div>
+                    
                   </div>
+                    <div className="w-full items-center justify-center flex mb-0">
+                        <Button className={cn("m-auto")}>{plan.name === 'Enterprise Plan' ? 'Contact Us' : 'Get Started'}</Button>                    
+                    </div>
                   </BackgroundGradient>
                 })}
               </div>
