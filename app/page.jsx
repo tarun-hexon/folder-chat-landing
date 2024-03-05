@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/moving-border";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundBeams } from '@/components/ui/background-beams'
+import { cn } from "@/lib/utils"
 
 export default function Home() {
 
@@ -125,7 +126,7 @@ export default function Home() {
                   className="-top-20 left-0 md:left-60 md:top-20"
                   fill="white"
                 />
-                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Your', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Documents', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'into', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Conversations.', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
+                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
 
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Chat with your internal documents. Collaborate with your team. Connect with your systems.
@@ -137,13 +138,17 @@ export default function Home() {
                     className="rounded-[1.75rem] text-xl w-full font-[600]"
                   >Try For Free</Button></a>
               </div>
-              <ImagesSlider images={images} className="h-[30rem] w-[80%]" />
+              <ImagesSlider
+                images={images}
+                className={cn('h-[80vh] w-[60vw]')}
+              />
+
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="feature">
             <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 Connect and Collaborate
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -164,7 +169,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-10 xl:py-16">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 Seamless Integration
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -185,7 +190,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                   Integrated Chat
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -207,7 +212,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                   The Platform for Conversational Documents
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -238,7 +243,7 @@ export default function Home() {
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="pricing">
             <div className="w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6 space-y-5 flex-wrap">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pricing</h2>
+              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
               <div className="w-full flex gap-10 justify-center items-center flex-wrap">
                 {plans.map((plan, idx) => {
                   return <BackgroundGradient key={idx} className="lg:min-w-[28vw] min-w-[90vw] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8">
