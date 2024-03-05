@@ -75,7 +75,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-black text-white">
+    <div className="flex flex-col min-h-[100dvh] bg-black text-white flex-wrap">
       <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3] font-Inter">
         <Link className="flex items-center justify-center" href="#">
           <Image src={logo} />
@@ -97,7 +97,7 @@ export default function Home() {
       </header>
       <main className="flex-1">
         <section className="w-full py-8 md:py-12 lg:py-20 xl:py-28" id="about">
-          <div className="container flex flex-col items-center justify-center space-y-6 px-4 md:px-6">
+          <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
             <div className="text-center space-y-4">
               <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
@@ -115,7 +115,7 @@ export default function Home() {
                   <CarouselItem key={index}>
                     <div className="rounded">
                       <Card className="rounded bg-transparent">
-                        <CardContent className="flex h-fit items-center justify-center pl-4 rounded">
+                        <CardContent className="flex h-fit items-center justify-center pl-4 rounded flex-wrap">
                           <Image
                             alt="Image"
                             className="rounded-md"
@@ -132,7 +132,7 @@ export default function Home() {
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
-            <div className="mx-auto w-full space-y-2 flex flex-col justify-center items-center gap-4" >
+            <div className="mx-auto w-full space-y-2 flex flex-col justify-center items-center gap-4 flex-wrap" >
               <a href={'https://demo.folder.chat/auth/signup'} target="_blank">
                 <Button
                   className="rounded-[1.75rem] text-xl w-full font-[600]"
@@ -141,8 +141,8 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-20" id="feature">
-          <div className="w-full flex justify-between items-center px-10">
-            <div className="w-1/2 space-y-2">
+          <div className="w-full flex justify-between items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
+            <div className="w-full lg:w-1/2 space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 The Platform for Conversational Documents
               </h2>
@@ -152,7 +152,7 @@ export default function Home() {
                 integrated with the document.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <Image
                 alt="Image"
                 className="ml-auto rounded-md"
@@ -163,9 +163,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-20" id="feature">
-          <div className="w-full flex flex-row-reverse justify-between items-center px-10">
-            <div className="w-1/2 space-y-2">
+        <section className="w-full py-12 md:py-24 lg:py-20">
+          <div className="w-full flex lg:flex-row-reverse justify-between items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
+            <div className="w-full lg:w-1/2 space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 The Platform for Conversational Documents
               </h2>
@@ -175,7 +175,7 @@ export default function Home() {
                 integrated with the document.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <Image
                 alt="Image"
                 className="mr-auto rounded-md"
@@ -186,9 +186,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-20" id="feature">
-          <div className="w-full flex justify-between items-center px-10">
-            <div className="w-1/2 space-y-2">
+        <section className="w-full py-12 md:py-24 lg:py-20">
+          <div className="w-full flex justify-between items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
+            <div className="w-full lg:w-1/2 space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 The Platform for Conversational Documents
               </h2>
@@ -198,7 +198,7 @@ export default function Home() {
                 integrated with the document.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <Image
                 alt="Image"
                 className="ml-auto rounded-md"
@@ -209,9 +209,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-20" id="feature">
-          <div className="w-full flex flex-row-reverse justify-between items-center px-10">
-            <div className="w-1/2 space-y-2">
+        <section className="w-full py-12 md:py-24 lg:py-20">
+          <div className="w-full flex lg:flex-row-reverse justify-between items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
+            <div className="w-full lg:w-1/2 space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 The Platform for Conversational Documents
               </h2>
@@ -221,7 +221,7 @@ export default function Home() {
                 integrated with the document.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <Image
                 alt="Image"
                 className="mr-auto rounded-md"
@@ -233,11 +233,11 @@ export default function Home() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-20" id="pricing">
-          <div className="w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6 space-y-5 ">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">Pricing</h2>
-            <div className="w-full flex gap-10 justify-center items-center">
+          <div className="w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6 space-y-5 flex-wrap">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pricing</h2>
+            <div className="w-full flex gap-10 justify-center items-center flex-wrap">
               {plans.map((plan, idx) => {
-                return <BackgroundGradient key={idx} className="min-w-[28vw] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8">
+                return <BackgroundGradient key={idx} className="lg:min-w-[28vw] min-w-[80vw] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8">
                 <div className="space-y-4">
                   <div className="overflow-hidden p-4 space-y-4">
                     <h2 className="w-fit px-2 py-1 bg-[#14B8A6] rounded-md text-xl">{plan.name}</h2>
@@ -266,7 +266,7 @@ export default function Home() {
         </section>
 
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t flex-wrap">
         <p className="text-xs">© 2024 Hexon Labs. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
