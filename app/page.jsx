@@ -25,7 +25,7 @@ import {
 import { Button } from "@/components/ui/moving-border";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import StarsCanvas from '@/components/ui/Stars'
+import { BackgroundBeams } from '@/components/ui/background-beams'
 
 export default function Home() {
 
@@ -91,11 +91,12 @@ export default function Home() {
   const images = [
     '/assets/signup.png',
     '/assets/indexing.png',
-    '/assets/folderchat.png'
+    '/assets/upload.png',
+    '/assets/folderchat.png',
   ];
 
   return (
-      <div className="flex flex-col min-h-[100dvh] bg-black text-white flex-wrap m-0">
+      <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
         <FloatingNav navItems={navItems} className="text-white bg-black h-16"/>
         <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3] font-Inter">
           <Link className="flex items-center justify-center" href="#">
@@ -121,7 +122,7 @@ export default function Home() {
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
               <div className="text-center space-y-4">
                 <Spotlight
-                  className="-top-20 left-0 md:left-60 md:-top-96"
+                  className="-top-20 left-0 md:left-60 md:top-20"
                   fill="white"
                 />
                 <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Your', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Documents', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'into', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Conversations.', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
@@ -136,11 +137,11 @@ export default function Home() {
                     className="rounded-[1.75rem] text-xl w-full font-[600]"
                   >Try For Free</Button></a>
               </div>
-              <ImagesSlider images={images} className="h-[30rem] w-[80%]" direction="up"/>
+              <ImagesSlider images={images} className="h-[30rem] w-[80%]" />
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="feature">
-            <div className="w-full flex justify-between items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
+            <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                 Connect and Collaborate
@@ -152,9 +153,9 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="ml-auto rounded-md"
+                  className="m-auto rounded-md"
                   height={450}
-                  src={folderchat}
+                  src={'/assets/upload.png'}
                   width={450}
                 />
               </div>
@@ -182,7 +183,7 @@ export default function Home() {
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
-            <div className="w-full flex justify-between items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
+            <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                   Integrated Chat
@@ -194,16 +195,17 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="ml-auto rounded-md"
+                  className="m-auto rounded-md"
                   height={450}
                   src={folderchat}
                   width={450}
                 />
+                
               </div>
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
-            <div className="w-full flex lg:flex-row-reverse justify-between items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
+            <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
                   The Platform for Conversational Documents
@@ -214,14 +216,23 @@ export default function Home() {
                   integrated with the document.
                 </p>
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="w-full lg:w-1/2 z-0">
+                <div className="m-auto w-fit">
                 <Image
                   alt="Image"
-                  className="mr-auto rounded-md"
-                  height={450}
-                  src={folderchat}
-                  width={450}
+                  className="rounded-md z-50"
+                  height={400}
+                  src={'/assets/upload.png'}
+                  width={400}
                 />
+                <Image
+                  alt="Image"
+                  className="-mt-10 ml-20 rounded-lg"
+                  height={400}
+                  src={folderchat}
+                  width={400}
+                />
+                </div>
               </div>
             </div>
           </section>
@@ -258,6 +269,7 @@ export default function Home() {
             </div>
           </section>
 
+          
         </main>
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t flex-wrap">
           <p className="text-xs">© 2024 Hexon Labs. All rights reserved.</p>
@@ -270,9 +282,9 @@ export default function Home() {
             </a>
           </nav>
         </footer>
-        
+        <BackgroundBeams className="-z-10 fixed h-full w-full"/>
       </div>
+      
+      
   )
 }
-
-
