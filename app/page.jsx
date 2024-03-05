@@ -94,8 +94,8 @@ export default function Home() {
     '/assets/folderchat.png'
   ];
 
-  return (<div className="relative z-0">
-      <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0">
+  return (
+      <div className="flex flex-col min-h-[100dvh] bg-black text-white flex-wrap m-0">
         <FloatingNav navItems={navItems} className="text-white bg-black h-16"/>
         <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3] font-Inter">
           <Link className="flex items-center justify-center" href="#">
@@ -272,8 +272,6 @@ export default function Home() {
         </footer>
         
       </div>
-      <StarsCanvas />
-    </div>
   )
 }
 
