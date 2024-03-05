@@ -75,7 +75,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-black text-white flex-wrap">
+    <div className="flex flex-col min-h-[100dvh] bg-black text-white flex-wrap m-0">
       <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3] font-Inter">
         <Link className="flex items-center justify-center" href="#">
           <Image src={logo} />
@@ -100,7 +100,7 @@ export default function Home() {
           <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
             <div className="text-center space-y-4">
               <Spotlight
-                className="-top-40 left-0 md:left-60 md:-top-20"
+                className="-top-20 left-0 md:left-60 md:-top-20"
                 fill="white"
               />
               <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Your', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Documents', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'into', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Conversations.', className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
@@ -113,9 +113,9 @@ export default function Home() {
               <CarouselContent>
                 {caraouselImages.map((icon, index) => (
                   <CarouselItem key={index}>
-                    <div className="rounded">
+                    <div className="rounded w-full">
                       <Card className="rounded bg-transparent">
-                        <CardContent className="flex h-fit items-center justify-center pl-4 rounded flex-wrap">
+                        <CardContent className="flex h-fit items-center justify-center pl-4 rounded flex-wrap w-full">
                           <Image
                             alt="Image"
                             className="rounded-md"
@@ -237,7 +237,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pricing</h2>
             <div className="w-full flex gap-10 justify-center items-center flex-wrap">
               {plans.map((plan, idx) => {
-                return <BackgroundGradient key={idx} className="lg:min-w-[28vw] min-w-[80vw] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8">
+                return <BackgroundGradient key={idx} className="lg:min-w-[28vw] min-w-[90vw] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8">
                 <div className="space-y-4">
                   <div className="overflow-hidden p-4 space-y-4">
                     <h2 className="w-fit px-2 py-1 bg-[#14B8A6] rounded-md text-xl">{plan.name}</h2>
