@@ -129,8 +129,8 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className='hidden lg:flex'/>
+              <CarouselNext className='hidden lg:flex'/>
             </Carousel>
             <div className="mx-auto w-full space-y-2 flex flex-col justify-center items-center gap-4 flex-wrap" >
               <a href={'https://demo.folder.chat/auth/signup'} target="_blank">
