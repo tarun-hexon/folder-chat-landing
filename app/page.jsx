@@ -11,6 +11,7 @@ import { ImagesSlider } from "@/components/ui/images-slider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundBeams } from '@/components/ui/background-beams'
 import { cn } from "@/lib/utils"
+import { ArrowRight } from 'lucide-react';
 
 
 export default function Home() {
@@ -119,8 +120,9 @@ export default function Home() {
               <div className="mx-auto w-full space-y-2 flex flex-col justify-center items-center gap-4 flex-wrap" >
                 <a href={'https://demo.folder.chat/auth/signup'} target="_blank">
                   <BorderButton
-                    className="rounded-[1.75rem] text-xl w-full font-[600]"
-                  >Try For Free</BorderButton></a>
+                    className="rounded-[1.75rem] text-xl w-full font-[600] space-x-2"
+                    duration={4000}
+                  ><span>Try For  Free</span> <ArrowRight /></BorderButton></a>
               </div>
               <ImagesSlider
                 images={images}
