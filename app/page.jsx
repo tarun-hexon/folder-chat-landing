@@ -103,7 +103,7 @@ export default function Home() {
             </a>
           </nav>
         </header> */}
-        <main className="flex-1 mt-10">
+        <main className="flex-1 lg:mt-10 mt-28">
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24 " id="about">
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
               <div className="text-center space-y-4">
@@ -126,9 +126,8 @@ export default function Home() {
               </div>
               <ImagesSlider
                 images={images}
-                className={cn('lg:h-[65vh] lg:w-[60vw] h-[28vh]')}
+                className={cn('lg:h-[24rem] lg:w-[50rem] sm:h-[22rem] sm:w-[32rem] md:w-[36rem] h-[16rem] w-[24rem]')}
               />
-
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="feature">
@@ -232,7 +231,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
               <div className="w-full flex gap-10 justify-center items-center flex-wrap">
                 {plans.map((plan, idx) => {
-                  return <BackgroundGradient key={idx} className="lg:max-w-[22rem] max-w-[90vw] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black flex flex-col justify-between px-0">
+                  return <BackgroundGradient key={idx} className="lg:max-w-[22rem] max-w-[24rem] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black flex flex-col justify-between px-0">
                     <div className="overflow-hidden space-y-8 w-full p-4 lg:p-0">
                       <h2 className="w-fit font-[600] px-2 py-1 rounded-md text-2xl">{plan.name}</h2>
                       <Button variant={'outline'} className="text-black">{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button> 
