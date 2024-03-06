@@ -1,34 +1,20 @@
 'use client'
-import Link from "next/link"
-import logo from '@/public/assets/favicon.svg'
 import folderchat from '@/public/assets/folderchat.png'
-import Signup from '@/public/assets/signup.png'
-import indexing from '@/public/assets/indexing.png'
-import Web from '@/public/assets/web.png'
-import file from '@/public/assets/files.png'
-import github from '@/public/assets/github.png'
-import confluence from '@/public/assets/confluence.png'
-import drive from '@/public/assets/drive.png'
 import checkIcon from '@/public/assets/Use_Checkmark.svg';
 import Image from "next/image"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { Spotlight } from "@/components/ui/Spotlight";
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/moving-border";
+import { Button } from "@/components/ui/button";
+import { BorderButton } from "@/components/ui/moving-border";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundBeams } from '@/components/ui/background-beams'
 import { cn } from "@/lib/utils"
 
+
 export default function Home() {
+
 
   const navItems = [
     {
@@ -87,12 +73,6 @@ export default function Home() {
     }
   ];
 
-  const caraouselImages = [
-    Signup,
-    indexing,
-    folderchat,
-  ]
-
   const images = [
     '/assets/signup.png',
     '/assets/indexing.png',
@@ -102,8 +82,8 @@ export default function Home() {
 
   return (
       <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
-        <FloatingNav navItems={navItems} className="text-white bg-black h-16"/>
-        <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">
+        <FloatingNav navItems={navItems} className="text-white bg-zinc-800 h-16 "/>
+        {/* <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">
           <Link className="flex items-center justify-center" href="#">
             <Image src={'/assets/favicon.svg'} alt="folder.chat" width={30} height={30}/>
           </Link>
@@ -121,8 +101,8 @@ export default function Home() {
               Contact
             </a>
           </nav>
-        </header>
-        <main className="flex-1">
+        </header> */}
+        <main className="flex-1 mt-10">
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24 " id="about">
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
               <div className="text-center space-y-4">
@@ -138,9 +118,9 @@ export default function Home() {
               </div>
               <div className="mx-auto w-full space-y-2 flex flex-col justify-center items-center gap-4 flex-wrap" >
                 <a href={'https://demo.folder.chat/auth/signup'} target="_blank">
-                  <Button
+                  <BorderButton
                     className="rounded-[1.75rem] text-xl w-full font-[600]"
-                  >Try For Free</Button></a>
+                  >Try For Free</BorderButton></a>
               </div>
               <ImagesSlider
                 images={images}
@@ -245,39 +225,39 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="pricing">
+          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-16 h-full text-center space-y-10" id="pricing">
             <div className="w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6 space-y-5 flex-wrap">
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
               <div className="w-full flex gap-10 justify-center items-center flex-wrap">
                 {plans.map((plan, idx) => {
-                  return <BackgroundGradient key={idx} className="lg:max-w-[30vw] max-w-[90vw] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black space-y-8 flex flex-col justify-between px-0">
-                  <div className="space-y-4" >
-                    <div className="overflow-hidden space-y-8 w-full">
-                      <h2 className="w-fit px-2 py-1 bg-[#14B8A6] rounded-md text-xl m-auto">{plan.name}</h2>
-                      <div className="flex flex-col gap-4">
+                  return <BackgroundGradient key={idx} className="lg:max-w-[22rem] max-w-[90vw] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black flex flex-col justify-between px-0">
+                    <div className="overflow-hidden space-y-8 w-full p-4 lg:p-0">
+                      <h2 className="w-fit font-[600] px-2 py-1 rounded-md text-2xl">{plan.name}</h2>
+                      <Button variant={'outline'} className="text-black">{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button> 
+                      <div className="flex flex-col gap-4 h-[22rem]">
                         {plan?.limits?.map((limit, idx) => {
-                          return <p key={idx} className='font-[500] text-[12px] leading-5 inline-flex items-center gap-2'>
+                          return <p key={idx} className='font-[500] text-[12px] inline-flex items-center gap-2'>
                             <Image src={checkIcon} alt='check' width={30} height={30} />
                             <span className="w-full">{limit}</span>
                           </p>
                         })}
-                        {plan.name !== 'Enterprise Plan' && <p className='font-[500] text-[12px] leading-5 inline-flex items-center gap-2'>
+                        {plan.name !== 'Enterprise Plan' && 
+                        <p className='font-[500] text-[12px] leading-5 inline-flex items-center gap-2'>
                             <Image src={checkIcon} alt='check' width={30} height={30} />
                             <span className="w-full">{plan.price}</span>
                           </p>}
                       </div>
                       
                     </div>
-                    
-                  </div>
-                    <div className="w-full items-center justify-center flex mb-0">
-                        <Button className={cn("m-auto")}>{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button>                    
-                    </div>
                   </BackgroundGradient>
                 })}
               </div>
 
             </div>
+            {/* <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
+            <div className="h-[20rem] md:min-h-[45rem] md:max-h-[45rem] relative flex flex-row max-w-[55rem] mx-auto items-center justify-center">
+              <Tabs tabs={tabs} />
+            </div> */}
           </section>
 
           
