@@ -140,7 +140,7 @@ export default function Home() {
               </div>
               <ImagesSlider
                 images={images}
-                className={cn('h-[80vh] w-[60vw]')}
+                className={cn('lg:h-[65vh] lg:w-[60vw] h-[28vh]')}
               />
 
             </div>
@@ -226,16 +226,16 @@ export default function Home() {
                 <Image
                   alt="Image"
                   className="rounded-md z-50"
-                  height={400}
+                  height={300}
                   src={'/assets/upload.png'}
-                  width={400}
+                  width={300}
                 />
                 <Image
                   alt="Image"
                   className="-mt-10 ml-20 rounded-lg"
-                  height={400}
+                  height={300}
                   src={folderchat}
-                  width={400}
+                  width={300}
                 />
                 </div>
               </div>
