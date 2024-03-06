@@ -75,10 +75,14 @@ export default function Home() {
       name: 'Enterprise Plan',
       price: 'Contact Us',
       limits: [
+        'Option for self-hosting with a custom LLM on your own cloud infrastructure.',
         'Up to 10 documents per folder; maximum of 10 folders per user.',
-        'No file size limit',
-        'Option for self-hosting with a custom LLM on your own cloud infrastructure. ',
-        'Unlimited messaging.'
+        'Maximum of 25MB per file',
+        'Integrations include everything in Starter + Slack, Jira, and Confluence.',
+        'Unlimited messaging.',
+        'Finetuned Embedding Model',
+        'Finetuned LLM Model',
+        'Custom Chunking Strategy'
       ]
     }
   ];
@@ -246,9 +250,9 @@ export default function Home() {
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
               <div className="w-full flex gap-10 justify-center items-center flex-wrap">
                 {plans.map((plan, idx) => {
-                  return <BackgroundGradient key={idx} className="lg:max-w-[28vw] max-w-[90vw] h-[32rem] text-justify py-1 rounded-[22px] p-4 sm:p-10 bg-black space-y-8 flex flex-col justify-between">
+                  return <BackgroundGradient key={idx} className="lg:max-w-[30vw] max-w-[90vw] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black space-y-8 flex flex-col justify-between px-0">
                   <div className="space-y-4" >
-                    <div className="overflow-hidden p-4 space-y-8 w-full">
+                    <div className="overflow-hidden space-y-8 w-full">
                       <h2 className="w-fit px-2 py-1 bg-[#14B8A6] rounded-md text-xl m-auto">{plan.name}</h2>
                       <div className="flex flex-col gap-4">
                         {plan?.limits?.map((limit, idx) => {
@@ -267,7 +271,7 @@ export default function Home() {
                     
                   </div>
                     <div className="w-full items-center justify-center flex mb-0">
-                        <Button className={cn("m-auto")}>{plan.name === 'Enterprise Plan' ? 'Contact Us' : 'Get Started'}</Button>                    
+                        <Button className={cn("m-auto")}>{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button>                    
                     </div>
                   </BackgroundGradient>
                 })}
