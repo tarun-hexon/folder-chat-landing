@@ -63,10 +63,11 @@ export default function Home() {
       price: 'Contact Us',
       limits: [
         'Option for self-hosting with a custom LLM on your own cloud infrastructure.',
-        'Up to 10 documents per folder; maximum of 10 folders per user.',
-        'Maximum of 25MB per file',
+        'No document and folder limits',
+        'No file size limit.',
         'Integrations include everything in Starter + Slack, Jira, and Confluence.',
         'Unlimited messaging.',
+        'API access to folders.',
         'Finetuned Embedding Model',
         'Finetuned LLM Model',
         'Custom Chunking Strategy'
