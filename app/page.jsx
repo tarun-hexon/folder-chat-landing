@@ -234,7 +234,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
               <div className="w-full flex gap-10 justify-center items-center flex-wrap">
                 {plans.map((plan, idx) => {
-                  return <BackgroundGradient key={idx} className="lg:max-w-[22rem] max-w-[24rem] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black flex flex-col justify-between px-0">
+                  return <BackgroundGradient key={idx} className="lg:max-w-[22rem] max-w-[24rem] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-[#1f0f21] flex flex-col justify-between px-0">
                     <div className="overflow-hidden space-y-8 w-full p-4 lg:p-0">
                       <h2 className="w-fit font-[600] px-2 py-1 rounded-md text-2xl">{plan.name}</h2>
                       <Button variant={'outline'} className="text-black">{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button> 
