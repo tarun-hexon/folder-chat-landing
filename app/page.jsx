@@ -12,6 +12,8 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BackgroundBeams } from '@/components/ui/background-beams'
 import { cn } from "@/lib/utils"
 import { ArrowRight } from 'lucide-react';
+import StarCanvas from '@/components/ui/Stars';
+
 
 
 export default function Home() {
@@ -236,7 +238,7 @@ export default function Home() {
                     <div className="overflow-hidden space-y-8 w-full p-4 lg:p-0">
                       <h2 className="w-fit font-[600] px-2 py-1 rounded-md text-2xl">{plan.name}</h2>
                       <Button variant={'outline'} className="text-black">{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button> 
-                      <div className="flex flex-col gap-4 h-[22rem]">
+                      <div className="flex flex-col gap-4 min-h-fit lg:h-[22rem]">
                         {plan?.limits?.map((limit, idx) => {
                           return <p key={idx} className='font-[500] text-[12px] inline-flex items-center gap-2'>
                             <Image src={checkIcon} alt='check' width={30} height={30} />
@@ -256,10 +258,7 @@ export default function Home() {
               </div>
 
             </div>
-            {/* <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
-            <div className="h-[20rem] md:min-h-[45rem] md:max-h-[45rem] relative flex flex-row max-w-[55rem] mx-auto items-center justify-center">
-              <Tabs tabs={tabs} />
-            </div> */}
+            
           </section>
 
           
