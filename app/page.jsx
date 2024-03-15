@@ -26,7 +26,7 @@ export default function Home() {
     },
     {
       name: "Pricing",
-      link: "#pricing",
+      link: "/pricing",
     },
     {
       name: "About",
@@ -193,7 +193,6 @@ export default function Home() {
                   src={folderchat}
                   width={450}
                 />
-                
               </div>
             </div>
           </section>
@@ -229,52 +228,10 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-16 h-full text-center space-y-10" id="pricing">
-            <div className="w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6 space-y-5 flex-wrap">
-              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
-              <div className="w-full flex gap-10 justify-center items-center flex-wrap">
-                {plans.map((plan, idx) => {
-                  return <BackgroundGradient key={idx} className="lg:max-w-[22rem] max-w-[24rem] h-fit text-justify py-1 rounded-[22px] sm:p-10 bg-black flex flex-col justify-between px-0">
-                    <div className="overflow-hidden space-y-8 w-full p-4 lg:p-0">
-                      <h2 className="w-fit font-[600] px-2 py-1 rounded-md text-2xl">{plan.name}</h2>
-                      <Button variant={'outline'} className="text-black">{plan.name === 'Enterprise Plan' ? <a href="mailto:info@hexonlabs.com">Contact Us</a> : 'Get Started'}</Button> 
-                      <div className="flex flex-col gap-4 min-h-fit lg:h-[22rem]">
-                        {plan?.limits?.map((limit, idx) => {
-                          return <p key={idx} className='font-[500] text-[12px] inline-flex items-center gap-2'>
-                            <Image src={checkIcon} alt='check' width={30} height={30} />
-                            <span className="w-full">{limit}</span>
-                          </p>
-                        })}
-                        {plan.name !== 'Enterprise Plan' && 
-                        <p className='font-[500] text-[12px] leading-5 inline-flex items-center gap-2'>
-                            <Image src={checkIcon} alt='check' width={30} height={30} />
-                            <span className="w-full">{plan.price}</span>
-                          </p>}
-                      </div>
-                      
-                    </div>
-                  </BackgroundGradient>
-                })}
-              </div>
-
-            </div>
-            
-          </section>
-
           
         </main>
-        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t flex-wrap">
-          <p className="text-xs">© 2024 Hexon Labs. All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <a className="text-xs hover:underline underline-offset-4" href="https://www.hexonlabs.com/terms-conditions" target="_blank">
-              Terms of Service
-            </a>
-            <a className="text-xs hover:underline underline-offset-4" href="https://www.hexonlabs.com/privacy-policy" target="_blank">
-              Privacy
-            </a>
-          </nav>
-        </footer>
-        <BackgroundBeams className="-z-10 fixed h-full w-full"/>
+        
+        
       </div>
       
       

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,22 @@ export default function RootLayout({
       <head>
       <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <BackgroundBeams className="-z-10 fixed h-full w-full"/>
+        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t flex-wrap text-white">
+          <p className="text-xs">© 2024 Hexon Labs. All rights reserved.</p>
+          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+            <a className="text-xs hover:underline underline-offset-4" href="https://www.hexonlabs.com/terms-conditions" target="_blank">
+              Terms of Service
+            </a>
+            <a className="text-xs hover:underline underline-offset-4" href="https://www.hexonlabs.com/privacy-policy" target="_blank">
+              Privacy
+            </a>
+          </nav>
+          
+        </footer>
+      </body>
     </html>
   );
 }
