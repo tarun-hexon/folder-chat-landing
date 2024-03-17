@@ -29,15 +29,15 @@ export const FloatingNav = ({
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-      // if (scrollYProgress.get() < 0.05) {
-      //   setVisible(false);
-      // } else {
-      //   if (direction < 0) {
-      //     setVisible(true);
-      //   } else {
-      //     setVisible(false);
-      //   }
-      // }
+      if (scrollYProgress.get() < 0.05) {
+        setVisible(false);
+      } else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
       
     }
   });
@@ -63,7 +63,7 @@ export const FloatingNav = ({
       >
         <Image src={logo} alt="folder.chat"/>
         {navItems.map((navItem: any, idx: number) => (
-          <Link
+          navItem.link !== '#contact' ? <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
@@ -72,7 +72,11 @@ export const FloatingNav = ({
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="sm:block lg:text-sm text-[10px]">{navItem.name}</span>
-          </Link>
+          </Link>:
+          <a href="mailto:info@hexonlabs.com" className={cn(
+            "relative dark:text-neutral-50 items-center flex space-x-1 text-white dark:hover:text-neutral-300 hover:text-neutral-500 font-bold"
+          )}><span className="block sm:hidden">{navItem.icon}</span>
+          <span className="sm:block lg:text-sm text-[10px]">{navItem.name}</span></a>
         ))}
         
       </motion.div>

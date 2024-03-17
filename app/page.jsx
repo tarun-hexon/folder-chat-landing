@@ -1,6 +1,7 @@
 'use client'
 import folderchat from '@/public/assets/folderchat.png'
 import checkIcon from '@/public/assets/Use_Checkmark.svg';
+import Link from 'next/link';
 import Image from "next/image"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
@@ -87,25 +88,7 @@ export default function Home() {
   return (
       <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
         <FloatingNav navItems={navItems} className="text-white bg-zinc-800 h-16 "/>
-        {/* <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">
-          <Link className="flex items-center justify-center" href="#">
-            <Image src={'/assets/favicon.svg'} alt="folder.chat" width={30} height={30}/>
-          </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="#feature">
-              Features
-            </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="#pricing">
-              Pricing
-            </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="#about">
-              About
-            </Link>
-            <a className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="mailto:info@hexonlabs.com">
-              Contact
-            </a>
-          </nav>
-        </header> */}
+        
         <main className="flex-1 lg:mt-10 mt-28">
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24 " id="about">
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
@@ -133,7 +116,7 @@ export default function Home() {
               />
             </div>
           </section>
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="feature">
+          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="features">
             <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
                 <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">

@@ -52,7 +52,7 @@ const Pricing = () => {
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
-      <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">
+      {/* <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">
           <Link className="flex items-center justify-center" href="/">
             <Image src={'/assets/favicon.svg'} alt="folder.chat" width={30} height={30}/>
           </Link>
@@ -65,7 +65,7 @@ const Pricing = () => {
               Contact
             </a>
           </nav>
-        </header>
+      </header> */}
     <section className="w-full py-5 md:py-8 lg:py-16 xl:py-16 h-full text-center space-y-10 text-white" id="pricing">
             <div className="w-full flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6 space-y-5 flex-wrap">
               <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Pricing</h2>
