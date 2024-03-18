@@ -97,7 +97,7 @@ export default function Home() {
                   className="-top-20 left-0 md:left-60 md:top-20"
                   fill="white"
                 />
-                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }]} className="h-40 md:h-48 lg:h-40"/>
+                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }]} className="h-40 md:h-48 lg:h-40"/>
 
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Chat with your internal documents. Collaborate with your team. Connect with your systems.
@@ -129,7 +129,7 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto rounded-md sm:w-full w-80"
+                  className="m-auto rounded-md"
                   height={450}
                   src={'/assets/upload.png'}
                   width={450}
@@ -150,7 +150,7 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto sm:w-full w-80"
+                  className="m-auto"
                   height={400}
                   src={'/assets/integrations.png'}
                   width={400}
@@ -171,7 +171,7 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto rounded-md sm:w-full w-80"
+                  className="m-auto rounded-md"
                   height={450}
                   src={folderchat}
                   width={450}
@@ -195,14 +195,14 @@ export default function Home() {
                 <div className="sm:m-auto w-fit">
                 <Image
                   alt="Image"
-                  className="rounded-md z-50 w-60 sm:w-full"
+                  className="rounded-md z-50"
                   height={300}
                   src={'/assets/upload.png'}
                   width={300}
                 />
                 <Image
                   alt="Image"
-                  className="-mt-10 sm:ml-20 ml-12 rounded-lg w-60 sm:w-full"
+                  className="-mt-10 sm:ml-20 ml-12 rounded-lg"
                   height={300}
                   src={folderchat}
                   width={300}
