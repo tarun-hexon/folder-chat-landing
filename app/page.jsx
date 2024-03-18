@@ -97,7 +97,7 @@ export default function Home() {
                   className="-top-20 left-0 md:left-60 md:top-20"
                   fill="white"
                 />
-                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#00dcc3]" }]} className="h-40"/>
+                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }]} className="h-40"/>
 
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Chat with your internal documents. Collaborate with your team. Connect with your systems.
@@ -119,7 +119,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="features">
             <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                 Connect and Collaborate
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -140,7 +140,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-10 xl:py-16">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                 Seamless Integration
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -161,7 +161,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                   Integrated Chat
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
@@ -182,7 +182,7 @@ export default function Home() {
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
-                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#00dcc3]">
+                <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                   The Platform for Conversational Documents
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
