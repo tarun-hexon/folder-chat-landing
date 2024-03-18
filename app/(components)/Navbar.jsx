@@ -84,7 +84,7 @@ const Navbar = () => {
                   href={`${
                     nav.name === "Pricing"
                       ? "/pricing"
-                      : "/#" + nav.link
+                      : "/" + nav.link
                   }`}
                 >
                   {nav.name}
