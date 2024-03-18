@@ -123,7 +123,7 @@ export default function Home() {
                 Connect and Collaborate
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                folder.chat revolutionizes communication by allowing you to chat directly within your internal documents or seamlessly connect with your existing systems to enable chat functionality.
+                Folder.Chat revolutionizes communication by allowing you to chat directly within your internal documents or seamlessly connect with your existing systems to enable chat functionality.
                 </p>
               </div>
               <div className="w-full lg:w-1/2">
@@ -186,7 +186,7 @@ export default function Home() {
                   The Platform for Conversational Documents
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  folder.chat allows you to turn your documents into conversations. Simply upload your files, and you can
+                  Folder.Chat allows you to turn your documents into conversations. Simply upload your files, and you can
                   start discussing the content with your team. No more switching between apps. The conversation is
                   integrated with the document.
                 </p>
