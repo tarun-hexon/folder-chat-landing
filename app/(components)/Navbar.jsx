@@ -65,7 +65,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 text-sm absolute top-10 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-black`}
+          } p-6 text-sm absolute top-10 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-black sm:hidden`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
             {navItems.map((nav) => (
