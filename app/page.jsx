@@ -152,7 +152,7 @@ export default function Home() {
                   alt="Image"
                   className="m-auto"
                   height={400}
-                  src={'/assets/connectors.png'}
+                  src={'/assets/integrations.png'}
                   width={400}
                 />
               </div>
