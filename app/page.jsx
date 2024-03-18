@@ -202,7 +202,7 @@ export default function Home() {
                 />
                 <Image
                   alt="Image"
-                  className="-mt-10 sm:ml-20 ml-12 rounded-lg"
+                  className="-mt-10 sm:ml-20 ml-10 rounded-lg"
                   height={300}
                   src={folderchat}
                   width={300}
