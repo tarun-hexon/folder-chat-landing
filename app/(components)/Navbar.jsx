@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center text-[#ffffff]">
-          <Link className="flex items-center justify-center" href="/">
+          <Link className="flex items-center justify-center" href="/" onClick={()=> setActive('')}>
             <Image src={'/assets/favicon.svg'} alt="folder.chat" width={30} height={30}/>
           </Link>
           <nav className="ml-auto hidden gap-4 sm:gap-6 sm:flex">
@@ -72,7 +72,7 @@ const Navbar = () => {
               <li
                 key={nav.link}
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.name ? "text-white" : "text-secondary"
+                  active === nav.name ? "text-white" : "text-gray-400"
                 }`}
                 onClick={() => {
                   setToggle(!toggle);
