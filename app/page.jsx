@@ -87,17 +87,17 @@ export default function Home() {
 
   return (
       <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
-        <FloatingNav navItems={navItems} className="text-white bg-zinc-800 h-16 "/>
+        <FloatingNav navItems={navItems} className="text-white bg-zinc-800 h-16 hidden sm:flex"/>
         
-        <main className="flex-1 lg:mt-10 mt-28">
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24 " id="about">
+        <main className="flex-1 lg:mt-10 mt-16 space-y-10">
+          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="about">
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
               <div className="text-center space-y-4">
                 <Spotlight
                   className="-top-20 left-0 md:left-60 md:top-20"
                   fill="white"
                 />
-                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }]} className="h-40"/>
+                <TypewriterEffect words={[{ text: 'Transform', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Your', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Documents', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'into', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }, { text: 'Conversations.', className: "text-4xl font-bold sm:text-5xl md:text-6xl/none text-[#ffffff]" }]} className="h-40 md:h-48 lg:h-40"/>
 
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Chat with your internal documents. Collaborate with your team. Connect with your systems.
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
               <ImagesSlider
                 images={images}
-                className={cn('lg:h-[24rem] lg:w-[50rem] sm:h-[22rem] sm:w-[32rem] md:w-[36rem] h-[16rem] w-[24rem]')}
+                className={cn('lg:h-[24rem] lg:w-[50rem] sm:h-[22rem] sm:w-[32rem] md:w-[36rem] h-[11rem] w-80')}
               />
             </div>
           </section>
@@ -129,7 +129,7 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto rounded-md"
+                  className="m-auto rounded-md sm:w-full w-80"
                   height={450}
                   src={'/assets/upload.png'}
                   width={450}
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className="w-full py-5 md:py-8 lg:py-10 xl:py-16">
+          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
               <div className="w-full lg:w-1/2 space-y-10">
                 <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
@@ -150,7 +150,7 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto"
+                  className="m-auto sm:w-full w-80"
                   height={400}
                   src={'/assets/integrations.png'}
                   width={400}
@@ -171,7 +171,7 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto rounded-md"
+                  className="m-auto rounded-md sm:w-full w-80"
                   height={450}
                   src={folderchat}
                   width={450}
@@ -186,23 +186,23 @@ export default function Home() {
                   The Platform for Conversational Documents
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Folder.Chat allows you to turn your documents into conversations. Simply upload your files, and you can
+                  folder.chat allows you to turn your documents into conversations. Simply upload your files, and you can
                   start discussing the content with your team. No more switching between apps. The conversation is
                   integrated with the document.
                 </p>
               </div>
-              <div className="w-full lg:w-1/2 z-0">
-                <div className="m-auto w-fit">
+              <div className="w-fit lg:w-1/2 z-0">
+                <div className="sm:m-auto w-fit">
                 <Image
                   alt="Image"
-                  className="rounded-md z-50"
+                  className="rounded-md z-50 w-60 sm:w-full"
                   height={300}
                   src={'/assets/upload.png'}
                   width={300}
                 />
                 <Image
                   alt="Image"
-                  className="-mt-10 ml-20 rounded-lg"
+                  className="-mt-10 sm:ml-20 ml-12 rounded-lg w-60 sm:w-full"
                   height={300}
                   src={folderchat}
                   width={300}
