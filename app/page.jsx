@@ -105,8 +105,8 @@ export default function Home() {
               </div>
               <div className='bg-white rounded-tl-[3rem] rounded-br-[3rem]'>
                 <Image 
-                src={'/assets/aws.png'}
-                alt="Image"
+                src={'/assets/Aws.png'}
+                alt="Aws Marketplace"
                 className="m-auto rounded-md"
                 height={300}
                 width={300}
