@@ -103,6 +103,15 @@ export default function Home() {
                   Chat with your internal documents. Collaborate with your team. Connect with your systems.
                 </p>
               </div>
+              <div className='bg-white rounded-tl-[3rem] rounded-br-[3rem]'>
+                <Image 
+                src={'/assets/aws.png'}
+                alt="Image"
+                className="m-auto rounded-md"
+                height={300}
+                width={300}
+                />
+              </div>
               <div className="mx-auto w-full space-y-2 flex flex-col justify-center items-center gap-4 flex-wrap" >
                 <a href={'https://demo.folder.chat/auth/signup'} target="_blank">
                   <BorderButton
@@ -110,10 +119,12 @@ export default function Home() {
                     duration={4000}
                   ><span>Try For  Free</span> <ArrowRight /></BorderButton></a>
               </div>
+              
               <ImagesSlider
                 images={images}
                 className={cn('lg:h-[24rem] lg:w-[50rem] sm:h-[22rem] sm:w-[32rem] md:w-[36rem] h-[11rem] w-80')}
               />
+              
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="features">
