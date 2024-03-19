@@ -79,10 +79,10 @@ export default function Home() {
   ];
 
   const images = [
-    '/assets/signup.png',
+    '/assets/signup-new.png',
     '/assets/indexing.png',
-    '/assets/upload.png',
-    '/assets/folderchat.png',
+    '/assets/upload-new.png',
+    '/assets/folderchat-new.png',
   ];
 
   return (
@@ -90,7 +90,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} className="text-white bg-zinc-800 h-16 hidden sm:flex"/>
         
         <main className="flex-1 lg:mt-10 mt-16 space-y-10">
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="about">
+          <section className="w-full py-5 md:py-8 lg:py-12 xl:py-20" id="about">
             <div className="container flex flex-col flex-wrap items-center justify-center space-y-12 px-4 md:px-6">
               <div className="text-center space-y-4">
                 <Spotlight
@@ -109,9 +109,9 @@ export default function Home() {
                   <BorderButton
                     className="rounded-[1.75rem] text-xl w-full font-[600] space-x-2"
                     duration={4000}
-                  ><span>Try For  Free</span> <ArrowRight /></BorderButton></a>
+                  ><span>Try for Free</span> <ArrowRight /></BorderButton></a>
               </div>
-              <div className='bg-white rounded-xl'>
+              <div className='bg-white rounded-tl-[1.5rem] rounded-br-[1.5rem]'>
                 <Image 
                 src={'/assets/Aws.png'}
                 alt="Aws Marketplace"
@@ -141,9 +141,9 @@ export default function Home() {
                 <Image
                   alt="Image"
                   className="m-auto rounded-md"
-                  height={450}
-                  src={'/assets/upload.png'}
-                  width={450}
+                  height={500}
+                  src={'/assets/upload-new.png'}
+                  width={500}
                 />
               </div>
             </div>
@@ -183,9 +183,9 @@ export default function Home() {
                 <Image
                   alt="Image"
                   className="m-auto rounded-md"
-                  height={450}
-                  src={folderchat}
-                  width={450}
+                  height={500}
+                  src={'/assets/folderchat-new.png'}
+                  width={500}
                 />
               </div>
             </div>
@@ -207,16 +207,16 @@ export default function Home() {
                 <Image
                   alt="Image"
                   className="rounded-md z-50"
-                  height={300}
-                  src={'/assets/upload.png'}
-                  width={300}
+                  height={350}
+                  src={'/assets/upload-new.png'}
+                  width={350}
                 />
                 <Image
                   alt="Image"
                   className="-mt-10 sm:ml-20 ml-10 rounded-lg"
-                  height={300}
-                  src={folderchat}
-                  width={300}
+                  height={350}
+                  src={'/assets/folderchat-new.png'}
+                  width={350}
                 />
                 </div>
               </div>
