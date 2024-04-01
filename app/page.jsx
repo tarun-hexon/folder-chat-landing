@@ -83,6 +83,7 @@ export default function Home() {
     '/assets/indexing.png',
     '/assets/upload-new.png',
     '/assets/folderchat-new.png',
+    '/assets/githubSS.png',
   ];
 
   return (
@@ -127,9 +128,9 @@ export default function Home() {
               
             </div>
           </section>
-          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24" id="features">
-            <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
-              <div className="w-full lg:w-1/2 space-y-10">
+          <section className="w-full py-5 md:py-8 lg:py-16 xl:py-2" id="features">
+            <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-2">
+              <div className="w-full lg:w-[40%] space-y-10">
                 <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                 Connect and Collaborate
                 </h2>
@@ -137,20 +138,29 @@ export default function Home() {
                 Folder.Chat revolutionizes communication by allowing you to chat directly within your internal documents or seamlessly connect with your existing systems to enable chat functionality.
                 </p>
               </div>
-              <div className="w-full lg:w-1/2">
+              <div className="w-fit lg:w-1/2 z-0">
+                <div className="sm:m-auto lg:m-0 w-fit">
                 <Image
                   alt="Image"
-                  className="m-auto rounded-md"
-                  height={500}
-                  src={'/assets/upload-new.png'}
-                  width={500}
+                  className="rounded-md z-50 lg:w-full lg:h-full w-72 h-40"
+                  height={400}
+                  src={'/assets/indexing.png'}
+                  width={400}
                 />
+                <Image
+                  alt="Image"
+                  className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-full lg:h-full -mt-14 ml-8"
+                  height={450}
+                  src={'/assets/folderchat-new.png'}
+                  width={400}
+                />
+                </div>
               </div>
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
-              <div className="w-full lg:w-1/2 space-y-10">
+              <div className="w-full lg:w-[40%] space-y-10">
                 <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                 Seamless Integration
                 </h2>
@@ -171,12 +181,12 @@ export default function Home() {
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex justify-around items-center px-4 md:px-6 flex-wrap flex-col lg:flex-row text-center gap-6 lg:gap-0">
-              <div className="w-full lg:w-1/2 space-y-10">
+              <div className="w-full lg:w-[40%] space-y-10">
                 <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                   Integrated Chat
                 </h2>
                 <p className="max-w-full text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Chat directly within your internal documents or seamlessly connect with your existing systems to enable chat functionality.
+                Chat directly within your internal documents or seamlessly connect with your datasources to enable chat functionality.
                 </p>
               </div>
               <div className="w-full lg:w-1/2">
@@ -184,15 +194,15 @@ export default function Home() {
                   alt="Image"
                   className="m-auto rounded-md"
                   height={500}
-                  src={'/assets/folderchat-new.png'}
-                  width={500}
+                  src={'/assets/githubSS.png'}
+                  width={580}
                 />
               </div>
             </div>
           </section>
           <section className="w-full py-5 md:py-8 lg:py-16 xl:py-24">
             <div className="w-full flex lg:flex-row-reverse justify-around items-center px-4 md:px-6 flex-wrap flex-col text-center gap-6 lg:gap-0">
-              <div className="w-full lg:w-1/2 space-y-10">
+              <div className="w-full lg:w-[40%] space-y-10">
                 <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl/none text-[#ffffff]">
                   The Platform for Conversational Documents
                 </h2>
@@ -203,20 +213,20 @@ export default function Home() {
                 </p>
               </div>
               <div className="w-fit lg:w-1/2 z-0">
-                <div className="sm:m-auto w-fit">
+                <div className="sm:m-auto lg:m-0 w-fit">
                 <Image
                   alt="Image"
-                  className="rounded-md z-50"
-                  height={350}
+                  className="rounded-md z-50 lg:w-full lg:h-full w-72 h-40"
+                  height={400}
                   src={'/assets/upload-new.png'}
-                  width={350}
+                  width={400}
                 />
                 <Image
                   alt="Image"
-                  className="-mt-10 sm:ml-20 ml-10 rounded-lg"
-                  height={350}
-                  src={'/assets/folderchat-new.png'}
-                  width={350}
+                  className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-full lg:h-full -mt-14 ml-8"
+                  height={450}
+                  src={'/assets/webSS.png'}
+                  width={400}
                 />
                 </div>
               </div>
