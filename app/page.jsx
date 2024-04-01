@@ -111,7 +111,7 @@ export default function Home() {
                     duration={4000}
                   ><span>Try for Free</span> <ArrowRight /></BorderButton></a>
               </div>
-              <div className='bg-white rounded-tl-[1.5rem] rounded-br-[1.5rem]'>
+              {/* <div className='bg-white rounded-tl-[1.5rem] rounded-br-[1.5rem]'>
                 <Image 
                 src={'/assets/Aws.png'}
                 alt="Aws Marketplace"
@@ -119,7 +119,7 @@ export default function Home() {
                 height={200}
                 width={200}
                 />
-              </div>
+              </div> */}
               <ImagesSlider
                 images={images}
                 className={cn('lg:h-[24rem] lg:w-[50rem] sm:h-[22rem] sm:w-[32rem] md:w-[36rem] h-[11rem] w-80')}
