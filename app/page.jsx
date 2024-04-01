@@ -142,17 +142,17 @@ export default function Home() {
                 <div className="sm:m-auto lg:m-0 w-fit">
                 <Image
                   alt="Image"
-                  className="rounded-md z-50 lg:w-full lg:h-full w-72 h-40"
-                  height={400}
+                  className="rounded-md z-50 lg:w-[500px] lg:h-full w-72 h-40"
+                  height={1000}
                   src={'/assets/indexing.png'}
-                  width={400}
+                  width={1000}
                 />
                 <Image
                   alt="Image"
-                  className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-full lg:h-full -mt-14 ml-8"
-                  height={450}
+                  className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-[500px] lg:h-full -mt-14 ml-8"
+                  height={1000}
                   src={'/assets/folderchat-new.png'}
-                  width={400}
+                  width={1000}
                 />
                 </div>
               </div>
@@ -192,10 +192,10 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <Image
                   alt="Image"
-                  className="m-auto rounded-md"
-                  height={500}
+                  className="m-auto rounded-md w-72 h-40 lg:w-[500px] lg:h-full"
+                  height={1000}
                   src={'/assets/githubSS.png'}
-                  width={580}
+                  width={1000}
                 />
               </div>
             </div>
@@ -216,18 +216,19 @@ export default function Home() {
                 <div className="sm:m-auto lg:m-0 w-fit">
                 <Image
                   alt="Image"
-                  className="rounded-md z-50 lg:w-full lg:h-full w-72 h-40"
-                  height={400}
+                  className="rounded-md z-50 lg:w-[500px] lg:h-full w-72 h-40"
+                  height={1000}
                   src={'/assets/upload-new.png'}
-                  width={400}
+                  width={1000}
                 />
                 <Image
                   alt="Image"
-                  className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-full lg:h-full -mt-14 ml-8"
-                  height={450}
+                  className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-[500px] lg:h-full -mt-14 ml-8"
+                  height={1000}
                   src={'/assets/webSS.png'}
-                  width={400}
+                  width={1000}
                 />
+                
                 </div>
               </div>
             </div>
