@@ -14,6 +14,7 @@ import { BackgroundBeams } from '@/components/ui/background-beams'
 import { cn } from "@/lib/utils"
 import { ArrowRight } from 'lucide-react';
 import StarCanvas from '@/components/ui/Stars';
+import webSS from "@/public/assets/WebSS.png"
 
 
 
@@ -225,7 +226,7 @@ export default function Home() {
                   alt="Image"
                   className="lg:-mt-24 lg:ml-24 rounded-lg w-72 h-40 lg:w-[500px] lg:h-full -mt-14 ml-8"
                   height={1000}
-                  src={'/assets/webSS.png'}
+                  src={webSS}
                   width={1000}
                 />
                 
