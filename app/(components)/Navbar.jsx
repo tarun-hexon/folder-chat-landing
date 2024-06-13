@@ -14,10 +14,10 @@ const Navbar = () => {
       name: "Features",
       link: "#features",
     },
-    {
-      name: "Pricing",
-      link: "/pricing",
-    },
+    // {
+    //   name: "Pricing",
+    //   link: "/pricing",
+    // },
     {
       name: "About",
       link: "#about",
@@ -39,9 +39,9 @@ const Navbar = () => {
             <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="/#features">
               Features
             </Link>
-            <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="/pricing">
+            {/* <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="/pricing">
               Pricing
-            </Link>
+            </Link> */}
             <Link className="text-sm font-medium hover:underline underline-offset-4 duration-200" href="/#about">
               About
             </Link>

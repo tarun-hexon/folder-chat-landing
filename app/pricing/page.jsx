@@ -1,16 +1,17 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link';
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 import checkIcon from '@/public/assets/Use_Checkmark.svg';
 import { Button } from "@/components/ui/button";
 import Image from "next/image"
+import { useRouter } from 'next/navigation';
 
 
 const Pricing = () => {
 
-
+  const router = useRouter()
     const plans = [
         {
           name: 'Free Plan',
@@ -49,7 +50,9 @@ const Pricing = () => {
         }
       ];
 
-
+useEffect(()=> {
+  router.push('/')
+}, [])
   return (
     <div className="flex flex-col min-h-[100dvh] bg-transparent text-white flex-wrap m-0 z-50">
       {/* <header className="px-4 lg:px-6 h-14 flex items-center text-[#00dcc3]">

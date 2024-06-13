@@ -26,10 +26,10 @@ export default function Home() {
       name: "Features",
       link: "#features",
     },
-    {
-      name: "Pricing",
-      link: "/pricing",
-    },
+    // {
+    //   name: "Pricing",
+    //   link: "/pricing",
+    // },
     {
       name: "About",
       link: "#about",
